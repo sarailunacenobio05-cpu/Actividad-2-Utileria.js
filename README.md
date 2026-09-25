@@ -31,13 +31,13 @@ Para utilizar esta librería en cualquiera de tus proyectos, simplemente descarg
 
 **Qué hace:** Valida si una cadena de texto cumple con el formato básico de un correo electrónico mediante una expresión regular.
 
-*Funcion:**
+**Funcion:**
 ```javascript
 validarCorreo(correo) { 
         const mail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
         return mail.test(correo); 
     }
-
+```
 
 **Ejemplos :**
 
@@ -47,20 +47,20 @@ validarCorreo("test@example.com");
 
 validarCorreo("correo-invalido.com"); 
 // Retorna: false
-
+```
 ---
 
 ### 2. `soloLetras(texto)`
 
 **Qué hace:** Comprueba que un texto contenga exclusivamente letras (incluyendo acentos y la letra ñ) y espacios, evitando números o símbolos.
 
-*Funcion:**
+**Funcion:**
 ```javascript
 soloLetras(texto) { 
         const text = /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]+$/; 
         return text.test(texto);
     }
-
+```
 **Ejemplos :**
 
 ```javascript
@@ -69,7 +69,7 @@ soloLetras("María José");
 
 soloLetras("Usuario123"); 
 // Retorna: false
-
+```
 ---
 
 ### 3. `validarLongitud(numero, maxLongitud)`
@@ -91,7 +91,7 @@ validarLongitud(12345, 5);
 
 validarLongitud(123456, 5); 
 // Retorna: false
-
+```
 ---
 
 ### 4. `utileria.calcularEdad(fechaNacimiento)`
@@ -111,13 +111,13 @@ calcularEdad(fechaNacimiento) {
         return edad; 
     }
 
-
+```
 **Ejemplo :**
 
 ```javascript
 utileria.calcularEdad("2000-05-15"); 
 // Resultado: 26 (dependiendo del año actual en curso)
-
+```
 ---
 
 ### 5. `esMayorDeEdad(fechaNacimiento)`
@@ -130,7 +130,7 @@ esMayorDeEdad(fechaNacimiento) {
         return this.calcularEdad(fechaNacimiento) >= 18; 
     }
 
-
+```
 **Ejemplo de uso y consola:**
 
 ```javascript
@@ -139,7 +139,7 @@ utileria.esMayorDeEdad("2000-05-15");
 
 utileria.esMayorDeEdad("2015-08-20") 
 // Retorna: false
-
+```
 ---
 
 ### 6. `utileria.validarPassword(password)`
@@ -152,7 +152,7 @@ validarPassword(password) {
         const cont = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
         return cont.test(password); 
     }
-
+```
 
 **Ejemplo de uso y consola:**
 
@@ -162,7 +162,7 @@ utileria.validarPassword("P@ssw0rd1");
 
 utileria.validarPassword("debil"); 
 // Retorna: false
-
+```
 ---
 ## Funciones adicionales
 ### 7. `utileria.validarTelefono(telefono)`
@@ -175,7 +175,7 @@ validarTelefono(telefono) {
         const tel = /^\d{10}$/;
         return tel.test(String(telefono).trim()); 
     }
-
+```
 
 **Ejemplo de uso y consola:**
 
@@ -185,7 +185,7 @@ utileria.validarTelefono("9511234567");
 
 utileria.validarTelefono("12345"); 
 // Retorna: false
-
+```
 ---
 
 ### 8. `vutileria.validarCP(cp)`
@@ -199,7 +199,7 @@ validarCP(cp) {
         return regex.test(String(cp).trim());
     }
 
-
+```
 **Ejemplo de uso y consola:**
 
 ```javascript
@@ -208,7 +208,7 @@ utileria.validarCP("68120");
 
 utileria.validarCP("1234"); 
 // Retorna: false
-
+```
 
 
 ##Capturas de pantalla
