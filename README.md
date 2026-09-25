@@ -84,7 +84,7 @@ validarLongitud(numero, maxLongitud) {
     }
 ```
 
-**Ejemplo de uso y consola:**
+**Ejemplos:**
 
 ```javascript
 validarLongitud(12345, 5); 
