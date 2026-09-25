@@ -82,6 +82,7 @@ validarLongitud(numero, maxLongitud) {
         const str = String(numero);
         return str.length <= maxLongitud; 
     }
+```
 
 **Ejemplo de uso y consola:**
 
