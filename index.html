@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Registro</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/utileria.js"></script>
+</head>
+<body>
+    
+    <a href="login.html" class="btn-regresar"> Login </a>
+
+    <div class="contenedor-formulario">
+        <h1>Registro</h1>
+        
+        <form class="formulario" id="registroForm">            
+            <div class="grupo-formulario">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
+            </div>
+
+            <div class="grupo-formulario">
+                <label for="correo">Correo electrónico:</label>
+                <input type="text" id="correo" required>
+            </div>
+
+            <div class="grupo-formulario">
+                <label for="loginPassword">Contraseña:</label>
+                <input type="password" id="loginPassword" required>
+            </div>
+
+            <div class="grupo-formulario">
+                <label for="telefono">Teléfono :</label>
+                <input type="text" id="telefono"  required>
+            </div>
+
+            <div class="grupo-formulario">
+                <label for="cp">Código Postal :</label>
+                <input type="text" id="cp"  required>
+            </div>
+
+            <div class="grupo-formulario">
+                <label for="fechaNac">Fecha de Nacimiento:</label>
+                <input type="date" id="fechaNac" required>
+            </div>
+
+            <div class="contenedor-botones" style="margin-top: 15px;">
+                <button type="button" id="Bagregar" class="Bagregar">Validar Registro</button>
+            </div>
+            
+            <br>
+        </form>
+    </div>
+
+    <div id="miModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span id="cerrarModal">&times;</span>
+            <h3>Datos</h3>
+            <p id="mensajeModal"></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('Bagregar').addEventListener('click', function() {
+            const nombre = document.getElementById('nombre').value;
+            const correo = document.getElementById('correo').value;
+            const telefono = document.getElementById('telefono').value;
+            const cp = document.getElementById('cp').value;
+            const fechaNac = document.getElementById('fechaNac').value;
+            const password = document.getElementById('loginPassword').value;
+
+            if (!utileria.soloLetras(nombre)) {
+                alert("El nombre solo debe contener letras.");
+                return;
+            }
+
+            if (!utileria.validarCorreo(correo)) {
+                alert("El correo electrónico no es válido.");
+                return;
+            }
+            
+            if (!utileria.validarPassword(password)) {
+                alert("La contraseña debe tener mínimo 8 caracteres, al menos una mayúscula, una minúscula, un número y un carácter especial.");
+                return;
+            }
+
+            
+            if (!utileria.validarTelefono(telefono) || !utileria.validarLongitud(telefono, 10)) {
+                alert("El teléfono debe contener exactamente 10 dígitos numéricos.");
+                return;
+            }
+
+            
+            if (!utileria.validarCP(cp) || !utileria.validarLongitud(cp, 5)) {
+                alert("El código postal debe contener exactamente 5 dígitos numéricos.");
+                return;
+            }
+
+            if (!fechaNac) {
+                alert("Por favor ingresa tu fecha de nacimiento.");
+                return;
+            }
+            
+            const edad = utileria.calcularEdad(fechaNac);
+            const esMayor = utileria.esMayorDeEdad(fechaNac);
+
+            const modal = document.getElementById('miModal');
+            const mensaje = document.getElementById('mensajeModal');
+            
+            if (modal && mensaje) {
+                mensaje.innerHTML = `
+                    Nombre: ${nombre.trim()}<br>
+                    Teléfono: ${telefono}<br>
+                    C.P.: ${cp}<br>
+                    Edad calculada: <strong>${edad} años</strong><br>
+                    ${esMayor ? "Estatus: Mayor de edad" : "Estatus: Menor de edad"}
+                `;
+                
+                modal.style.display = "block";
+            }
+        });
+
+        document.getElementById('cerrarModal').onclick = function() {
+            document.getElementById('miModal').style.display = "none";
+        }
+
+    </script>
+</body>
+</html>

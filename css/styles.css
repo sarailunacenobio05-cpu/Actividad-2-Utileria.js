@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: #fff5f8;
+    color: #4a3b40;
+    line-height: 1.6;
+    padding: 40px 20px;
+}
+
+.btn-regresar {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #7a5262;
+    font-weight: 600;
+    margin-bottom: 20px;
+    background: #ffffff;
+    padding: 8px 14px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(232, 121, 165, 0.08);
+}
+
+.contenedor-formulario{
+    max-width: 600px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(232, 121, 165, 0.08);
+}
+
+h1{
+    font-size: 28px;
+    color: #e879a5; 
+    margin-top: 8px;
+    text-align: center;
+}
+
+.grupo-formulario{
+    margin-top: 20px;
+}
+
+label{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    font-family: Georgia;
+    color: #7a5262;
+}
+
+input{
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #fbcfe8;
+    border-radius: 8px;
+    transition: all 0.3s;
+    background-color: #fffbfd;
+}
+
+input:focus{
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(232, 121, 165, 0.18);
+    border-color: #e879a5;
+}
+
+.contenedor-botones {
+    margin-top: 15px;
+}
+
+.Bagregar{
+    width: 100%;
+    background-color: #e879a5;
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Bagregar:hover{
+    background-color: #d75f8f;
+}
+
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 15% auto;
+    padding: 30px;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+#cerrarModal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#cerrarModal:hover {
+    color: #000;
+} 
+
+.Bagregar .btn-enlace {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+}

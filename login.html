@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/utileria.js" defer></script>
+</head>
+<body>
+
+    
+
+    <div class="contenedor-formulario">
+        <h1>Iniciar Sesión</h1>
+        
+        <form class="formulario" id="loginForm">            
+            <div class="grupo-formulario">
+                <label for="loginCorreo">Correo electrónico:</label>
+                <input type="text" id="loginCorreo" required>
+            </div>
+
+            <div class="grupo-formulario">
+                <label for="loginPassword">Contraseña:</label>
+                <input type="password" id="loginPassword" required>
+            </div>
+
+            <div class="contenedor-botones" style="margin-top: 15px;">
+                <button type="button" id="Blogin" class="Bagregar">
+                    Ingresar
+                </button>
+            </div>
+            
+            <br>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('Blogin').addEventListener('click', function() {
+            const correo = document.getElementById('loginCorreo').value;
+            const password = document.getElementById('loginPassword').value;
+
+            if (!utileria.validarCorreo(correo)) {
+                alert("El formato del correo es incorrecto.");
+                return;
+            }
+
+            if (!utileria.validarPassword(password)) {
+                alert("La contraseña debe tener mínimo 8 caracteres, al menos una mayúscula, una minúscula, un número y un carácter especial.");
+                return;
+            }
+
+            alert("¡Bienvenido!");
+        });
+    </script>
+</body>
+</html>
