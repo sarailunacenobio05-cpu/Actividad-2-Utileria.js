@@ -39,7 +39,7 @@ validarCorreo(correo) {
     }
 ```
 
-**Ejemplos :**
+**Ejemplos:**
 
 ```javascript
 validarCorreo("test@example.com"); 
@@ -61,7 +61,7 @@ soloLetras(texto) {
         return text.test(texto);
     }
 ```
-**Ejemplos :**
+**Ejemplos:**
 
 ```javascript
 soloLetras("María José"); 
@@ -113,7 +113,7 @@ calcularEdad(fechaNacimiento) {
     }
 
 ```
-**Ejemplo :**
+**Ejemplo:**
 
 ```javascript
 utileria.calcularEdad("2000-05-15"); 
@@ -155,7 +155,7 @@ validarPassword(password) {
     }
 ```
 
-**Ejemplo de uso y consola:**
+**Ejemplo:**
 
 ```javascript
 utileria.validarPassword("P@ssw0rd1"); 
@@ -178,7 +178,7 @@ validarTelefono(telefono) {
     }
 ```
 
-**Ejemplo de uso y consola:**
+**Ejemplos:**
 
 ```javascript
 utileria.validarTelefono("9511234567"); 
@@ -201,7 +201,7 @@ validarCP(cp) {
     }
 
 ```
-**Ejemplo de uso y consola:**
+**Ejemplos:**
 
 ```javascript
 utileria.validarCP("68120"); 
@@ -226,4 +226,5 @@ utileria.validarCP("1234");
 
 
 ##Video 
+
 [Ver Video](https://youtu.be/XE3lFLCWg-Y)
