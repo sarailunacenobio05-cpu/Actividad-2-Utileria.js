@@ -212,7 +212,7 @@ utileria.validarCP("1234");
 ```
 
 
-##Capturas de pantalla
+## Capturas de pantalla
 
 **Formulario de registro**
 ![Formulario de registro](img/registro.png)
@@ -225,6 +225,6 @@ utileria.validarCP("1234");
 
 
 
-##Video 
+## Video 
 
-[Ver Video](https://youtu.be/XE3lFLCWg-Y)
+[Video](https://youtu.be/XE3lFLCWg-Y)
