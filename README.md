@@ -15,14 +15,10 @@ Evita escribir validaciones repetitivas en cada formulario web, centralizando y 
 Para utilizar esta librería en cualquiera de tus proyectos, simplemente descarga el archivo `utileria.js` y enlázalo en tu documento HTML antes del cierre de la etiqueta `<body>` o dentro de la etiqueta `<head>`:
 
 ```html
-<script src="js/utileria.js"></script>
-
-o
-
-<head>
+<script src="js/utileria.js"></script> o <head>
   <script src="js/utileria.js"></script>
 </head>
-
+```markdown
 ---
 ## Funciones
 
